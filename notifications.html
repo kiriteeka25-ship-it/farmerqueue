@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - FarmerQueue</title>
+</head>
+
+<body>
+
+    <h1>🔔 Farmer Notifications</h1>
+
+    <hr>
+
+    {% if notifications %}
+
+        {% for notification in notifications %}
+
+            <div>
+                <h3>{{ notification[1] }}</h3>
+                <p>{{ notification[2] }}</p>
+                <hr>
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <h3>📭 No notifications yet.</h3>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/farmer-dashboard">
+        <button>Back to Dashboard</button>
+    </a>
+
+</body>
+</html>
