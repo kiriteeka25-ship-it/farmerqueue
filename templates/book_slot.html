@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Slot - FarmerQueue</title>
+</head>
+
+<body>
+
+    <h1>📅 Book Procurement Slot</h1>
+
+    <form method="POST" action="/book-slot">
+
+        <label for="centre">Procurement Centre:</label><br>
+        <select id="centre" name="centre" required>
+            <option value="">Select Centre</option>
+            <option value="Test Centre">Test Centre</option>
+            <option value="Main Procurement Centre">Main Procurement Centre</option>
+        </select>
+
+        <br><br>
+
+        <label for="date">Procurement Date:</label><br>
+        <input type="date" id="date" name="date" required>
+
+        <br><br>
+
+        <label for="time">Time Slot:</label><br>
+        <select id="time" name="time" required>
+            <option value="">Select Time</option>
+            <option value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+            <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+            <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+            <option value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+        </select>
+
+        <br><br>
+
+        <label for="crop">Crop Type:</label><br>
+        <select id="crop" name="crop" required>
+            <option value="">Select Crop</option>
+            <option value="Paddy">Paddy</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Maize">Maize</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label for="quantity">Quantity (kg):</label><br>
+        <input type="number" id="quantity" name="quantity"
+               min="1" required>
+
+        <br><br>
+
+        <button type="submit">Book Slot</button>
+
+    </form>
+
+    <br>
+
+    <a href="/farmer-dashboard">
+        <button type="button">Back to Dashboard</button>
+    </a>
+
+</body>
+</html>
